@@ -3,7 +3,7 @@
   display: flex;
   background-color: #222831;
   margin: 0px;
-  flex-basis: 50px;
+  flex-basis: 10px;
   flex-wrap: nowrap;
 }
 .logo {
@@ -16,9 +16,9 @@
   display: flex;
   list-style: none;
   justify-content: center;
-  gap: 40px;
+  gap: 25px;
   margin-right: 150px;
-  padding-top: 20px;
+  padding-top: 10px;
   color: #00adb5;
   font-family: "Kanit", sans-serif;
   font-weight: 500;
@@ -29,14 +29,28 @@
   border-radius: 7px;
   position: relative;
 }
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+
+}
+
+.bar {
+  width: 20px;
+  height: 2px;
+  background-color: #00adb5;
+  margin-top: 5px;
+  margin-right: 25px;
+  border-radius: 2px;
+}
 .main {
   background-color: #00adb5;
 }
 .banner {
   color: #00adb5;
-  font-size: larger;
+  font-size: large;
   font-weight: 600;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Kanit", sans-serif;
   position: absolute;
   top: 50%;
   right: 70%;
@@ -44,6 +58,7 @@
   white-space: nowrap;
   margin-left: 250px;
   border-radius: 10px;
+  border: none;
 }
 
 .main-img {
@@ -111,13 +126,17 @@ th {
 .pricing {
   background-color: #eeeeee;
   padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .pricing-a {
   display: flex;
   width: 250;
   flex-grow: 0;
   flex-shrink: 0;
-  height: 70vh;
+  flex-wrap: wrap;
+  height: 100vh;
+  overflow: auto; 
   gap: 15px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -137,25 +156,17 @@ th {
   font-family: "Kanit", sans-serif;
 }
 
-.pricing-plan-1 {
+.all-plans {
   width: 320px;
   flex-shrink: 0;
 }
-.pricing-plan-2 {
-  width: 320px;
-  flex-shrink: 0;
-}
-.pricing-plan-3 {
-  width: 320px;
-  flex-shrink: 0;
-}
+
 td {
   text-align: left;
   padding: 10px;
 }
 .package {
   display: flex;
-
   background-color: #393e46;
   border-radius: 20px 20px 0 0;
   margin-bottom: 0px;
@@ -265,37 +276,33 @@ ul {
 a {
   text-decoration: none;
   color: white;
-  text-shadow: 1px 1px black;
-  font-size: large;
+  text-shadow: none;
 }
 .pressed {
   color: white !important;
-  text-shadow: 5px 5px 10px rgb(89, 55, 169);
+  text-shadow: 5px 5px 10px rgb(12, 11, 13);
   box-shadow: 5px 5px 10px rgb(247, 247, 248);
 }
 
 .pressed2 {
-  color: #393e46 !important;
-  text-shadow: 5px 5px 10px rgb(89, 55, 169);
-  box-shadow: 5px 5px 10px #222831;
+  color: #f7f8f9 !important;
+  text-shadow: 5px 5px 10px rgb(20, 20, 21);
+  box-shadow: 5px 5px 10px #f7f8fa;
   background-color: #00adb5;
+
 }
+
 @media (max-width: 760px) {
   .navbar-list {
     display: flex;
     gap: 0px;
     flex-direction: column;
-    height: 30vh;
+    height: 20vh;
     flex-shrink: 0;
     justify-content: space-around;
   }
 }
 
-@media (max-width: 760px) {
-  .logo {
-    display: none;
-  }
-}
 @media (max-width: 1060px) {
   .banner {
     display: none;
@@ -359,5 +366,12 @@ a {
   }
   .bhamma {
     text-align: center;
+  }
+}
+@media (max-width: 760px) {
+  .navbar-toggle {
+    display: flex;
+    flex-direction: column;
+   
   }
 }
