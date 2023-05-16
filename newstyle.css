@@ -32,7 +32,6 @@
 .navbar-toggle {
   display: none;
   cursor: pointer;
-
 }
 
 .bar {
@@ -131,12 +130,11 @@ th {
 }
 .pricing-a {
   display: flex;
-  width: 250;
   flex-grow: 0;
   flex-shrink: 0;
-  flex-wrap: wrap;
-  height: 100vh;
-  overflow: auto; 
+  height: 60vh;
+  overflow: hidden;
+  flex-direction: row;
   gap: 15px;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -146,6 +144,8 @@ th {
   font-family: "Kanit", sans-serif;
   font-weight: 600;
   color: #eeeeee;
+  transition: transform 0.1s ease;
+
 }
 
 .pricing-table {
@@ -157,7 +157,10 @@ th {
 }
 
 .all-plans {
-  width: 320px;
+  width: 130px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  flex-grow: 0;
   flex-shrink: 0;
 }
 
@@ -289,9 +292,11 @@ a {
   text-shadow: 5px 5px 10px rgb(20, 20, 21);
   box-shadow: 5px 5px 10px #f7f8fa;
   background-color: #00adb5;
-
 }
-
+ .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
 @media (max-width: 760px) {
   .navbar-list {
     display: flex;
@@ -332,30 +337,10 @@ a {
   }
 }
 
-@media (max-width: 850px) {
-  .pricing {
-    padding-top: 150px;
-    padding-bottom: 150px;
-    margin-bottom: 0px;
-    background-color: #9ed2c6;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .pricing-a {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    flex-basis: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-right: 0px;
-    margin-left: 0px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-  }
-}
+
+
+ 
+
 @media (max-width: 760px) {
   ul {
     display: flex;
@@ -372,6 +357,5 @@ a {
   .navbar-toggle {
     display: flex;
     flex-direction: column;
-   
   }
 }
