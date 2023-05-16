@@ -135,7 +135,7 @@ th {
   flex-grow: 0;
   flex-shrink: 0;
   flex-wrap: wrap;
-  height: 80vh;
+  height: 100vh;
   overflow: auto; 
   gap: 15px;
   padding-top: 40px;
@@ -157,7 +157,7 @@ th {
 }
 
 .all-plans {
-  width: 420px;
+  width: 320px;
   flex-shrink: 0;
 }
 
